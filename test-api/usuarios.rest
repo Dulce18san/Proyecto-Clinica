@@ -1,0 +1,68 @@
+# Listado de usuarios
+GET http://127.0.0.1:8000/api/usuarios HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+### Consultar un usuario
+GET http://127.0.0.1:8000/api/usuarios/4 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+###Crear usuario
+POST http://127.0.0.1:8000/api/usuarios HTTP/1.1
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+Content-Type: application/json
+Accept: application/json
+
+{
+    "especialidad_id":0,
+    "name":"Benito Pablo",
+    "primer_apellido": " Juarez",
+    "segundo_apellido": "Perez",
+    "sexo": "Masculino",
+    "fecha_nacimiento": "1900-02-21",
+    "numero_celular": "7225329539",
+    "numero_fijo": "7226464824",
+    "numero_trabajo": "7225668278",
+    "email": "benito@gmail.com",
+    "rfc": "JUGPEHFYEUE3",
+    "cedula_profesional": "ADBCGD9",
+    "costo_consulta": "300",
+    "password": "password",
+    "perfil": "Médico",
+    "estatus": "Activo"
+}
+
+
+### Editar usuario
+PUT http://127.0.0.1:8000/api/usuarios/4 HTTP/1.1
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+Content-Type: application/json
+Accept: application/json
+
+{
+    "especialidad_id":0,
+    "name":"Josafat",
+    "primer_apellido": " Enriquez",
+    "segundo_apellido": "Adrian",
+    "sexo": "Masculino",
+    "fecha_nacimiento": "2002-02-13",
+    "numero_celular": "7225345567",
+    "numero_fijo": "1234567899",
+    "numero_trabajo": "1112233334",
+    "email": "josaa@gmail.com",
+    "rfc": "JAHSGDDTE",
+    "cedula_profesional": "SYEHDYW",
+    "costo_consulta": "500",
+    "password": "password",
+    "perfil": "Paciente",
+    "estatus": "Inactivo"
+}
+
+###Borrrar usuario
+DELETE http://127.0.0.1:8000/api/usuarios/5 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G

@@ -1,0 +1,53 @@
+
+
+# Listado de productos
+GET http://127.0.0.1:8000/api/productos HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+### Consultar un producto
+GET http://127.0.0.1:8000/api/productos/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+###Crear producto
+POST http://127.0.0.1:8000/api/productos HTTP/1.1
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+Content-Type: application/json
+Accept: application/json
+
+{
+    "producto": "Ventosas",
+    "existencias": 3,
+    "precio_unitario": 100,
+    "fotografia": "pomada.jpg",
+    "descripcion": "Ventosas para masaje",
+    "tasa_iva": 16,
+    "estatus": "Activo"
+}
+
+### Editar un producto 
+PUT http://127.0.0.1:8000/api/productos/1 HTTP/1.1
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+Content-Type: application/json
+Accept: application/json
+
+{
+    "producto": "Pomada modificada",
+    "existencias": 6,
+    "precio_unitario": 300,
+    "fotografia": "pomada.jpg",
+    "descripcion": "Ventosas para masaje",
+    "tasa_iva": 16,
+    "estatus": "Activo"
+}
+
+
+
+###Borrrar producto
+DELETE http://127.0.0.1:8000/api/productos/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G

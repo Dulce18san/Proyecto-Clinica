@@ -1,0 +1,38 @@
+# Listado de especialidades
+GET http://127.0.0.1:8000/api/especialidades HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+# Consultar una especialidad
+GET http://127.0.0.1:8000/api/especialidades/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer  1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+#Crear especialidad
+POST http://127.0.0.1:8000/api/especialidades HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer  1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+{
+    "especialidad": "Neurología" 
+}
+
+
+# Editar especialidad
+PUT http://127.0.0.1:8000/api/especialidades/3 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer  1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
+
+{
+    "especialidad": "Neurologia modificada"
+}
+
+#Borrrar especialidad
+DELETE http://127.0.0.1:8000/api/especialidades/3 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer  1|vviVWE5TMd4Vn1rwjNoVPLLO44PJlDPLjQlwco5G
