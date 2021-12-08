@@ -16,9 +16,7 @@ class CitasController extends Controller
      */
     public function index()
     {
-        return response()->json([
-            'data' => DB::table('citas')->select('id', 'cita')->get()
-        ]);
+        return CitaResource::collection(Cita::all());
     }
 
     /**
@@ -52,9 +50,7 @@ class CitasController extends Controller
      */
     public function show($id)
     {
-        return response()->json([
-            'data' => DB::table('citas')->select('id', 'cita')->where('id', $id)->get()
-        ]);
+        return new CitaResource(Cita::findOrFail($id));
     }
 
     /**
